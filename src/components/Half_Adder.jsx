@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Khalf from "./Khalf";
 
 function Half_Adder() {
   const [input1, setInput1] = useState(0);
@@ -42,7 +43,7 @@ function Half_Adder() {
         <h1 className="border-2 border-black px-3.5 rounded-xl">{carry}</h1>
       </div>
       <div className="mt-5">
-        <table className="table-fixed border-collapse border-3 border-gray-800 w-3/4 mx-auto">
+        <table className="table-fixed border-collapse border-3 border-gray-800 w-4/5 mx-auto">
           <thead>
             <tr className="bg-gray-200">
               <th className="border border-gray-500 px-4 py-2 text-center">
@@ -72,7 +73,7 @@ function Half_Adder() {
                 <tr
                   key={idx}
                   className={
-                    active ? "bg-green-200 font-semibold" : "hover:bg-gray-100"
+                    active ? "bg-green-200 font-semibold transition-all duration-300" : "hover:bg-gray-100"
                   }
                 >
                   <td className="border border-gray-500 px-4 py-2 text-center">
@@ -93,6 +94,7 @@ function Half_Adder() {
           </tbody>
         </table>
       </div>
+      <Khalf />
     </div>
   );
 }
