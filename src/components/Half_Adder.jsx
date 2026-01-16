@@ -19,27 +19,31 @@ function Half_Adder() {
 
   return (
     <div className="w-full ">
-      <div className="flex items-center px-12 py-2 gap-5">
-        <h1 className="px-2">First bit</h1>
+      <div className="text-1xl font-semibold flex w-4/5 items-center justify-center mx-auto">
+        <h1 px-4>Click on inputs to toggle the bits</h1>
+      </div>
+      <div className="flex items-center px-12 py-2 gap-5 justify-center">
+        
+        <h1 className="px-1.5">Input A</h1>
         <button
-          className="border-2 border-black px-2.5 rounded-xl"
+          className="border-2 border-black px-3.5 rounded-xl text-center"
           onClick={InputHandler1}
         >
           {input1}
         </button>
 
-        <h1 className="px-2">Second bit</h1>
+        <h1 className="px-1">Input B</h1>
         <button
-          className="border-2 border-black px-2.5 rounded-xl"
+          className="border-2 border-black px-3.5 rounded-xl"
           onClick={InputHandler2}
         >
           {input2}
         </button>
       </div>
-      <div className="flex items-center px-12 py-2 gap-5">
+      <div className="flex items-center px-12 py-2 gap-5 justify-center">
         <h1 className="px-4">Sum</h1>
         <h1 className="border-2 border-black px-3.5 rounded-xl">{sum}</h1>
-        <h1 className="px-6">Carry</h1>
+        <h1 className="px-2.5">Carry</h1>
         <h1 className="border-2 border-black px-3.5 rounded-xl">{carry}</h1>
       </div>
       <div className="mt-5">
@@ -73,7 +77,7 @@ function Half_Adder() {
                 <tr
                   key={idx}
                   className={
-                    active ? "bg-green-200 font-semibold transition-all duration-300" : "hover:bg-gray-100"
+                    active ? "bg-green-200 font-semibold transition-all duration-500" : "hover:bg-gray-100"
                   }
                 >
                   <td className="border border-gray-500 px-4 py-2 text-center">
