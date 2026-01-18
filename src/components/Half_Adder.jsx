@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import Khalf from "./Khalf";
+import Khalf_sum from "./Khalf_sum";
+import Khalf_carry from "./Khalf_carry";
+
 
 function Half_Adder() {
   const [input1, setInput1] = useState(0);
@@ -20,9 +22,9 @@ function Half_Adder() {
   return (
     <div className="w-full ">
       <div className="text-1xl font-semibold flex w-4/5 items-center justify-center mx-auto">
-        <h1 px-4>Click on inputs to toggle the bits</h1>
+        <h1 className="px-4">Click on inputs to toggle the bits</h1>
       </div>
-      <div className="flex items-center px-12 py-2 gap-5 justify-center">
+      <div className="w-4/5 mx-auto flex items-center px-3 py-2 gap-5 justify-center">
         
         <h1 className="px-1.5">Input A</h1>
         <button
@@ -40,7 +42,7 @@ function Half_Adder() {
           {input2}
         </button>
       </div>
-      <div className="flex items-center px-12 py-2 gap-5 justify-center">
+      <div className="w-4/5 mx-auto flex items-center py-2 gap-5 justify-center">
         <h1 className="px-4">Sum</h1>
         <h1 className="border-2 border-black px-3.5 rounded-xl">{sum}</h1>
         <h1 className="px-2.5">Carry</h1>
@@ -98,7 +100,8 @@ function Half_Adder() {
           </tbody>
         </table>
       </div>
-      <Khalf />
+      <Khalf_sum />
+      <Khalf_carry />
     </div>
   );
 }
